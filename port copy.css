@@ -1,0 +1,154 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f8f8;
+    transition: background 0.3s ease;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: #1f1f1f;
+    border-bottom: 2px solid #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo a {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.logo span {
+    color: #ddd;
+}
+
+/* Navigation */
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.nav a:hover {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: relative;
+}
+
+#darkMode {
+    display: none;
+}
+
+.toggle-label {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.toggle-label::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    top: 1px;
+    transition: 0.3s;
+}
+
+/* Dark Mode */
+#darkMode:checked + .toggle-label {
+    background-color: #4b4b4b;
+}
+
+#darkMode:checked + .toggle-label::before {
+    transform: translateX(20px);
+}
+
+/* Dark Mode Body */
+#darkMode:checked ~ body {
+    background-color: #1a1a1a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
+
+section{
+    padding: 20px; 
+    }
+
+.gallery img{ 
+    width: 200px; 
+    height: auto; 
+    margin: 10px; 
+    border-radius: 8px; 
+    }
+
+footer{ 
+    background: #333; 
+    color: white; 
+    padding: 10px; 
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    }
+
+
+#about{
+    background-image:url(22025-03-03\ 134850.png); 
+    background-size: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #333;
+    color:rgb(255, 255, 255);
+}

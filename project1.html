@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Rain Detector and Cloth Protection System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        img{
+            width:100%;
+            height: auto;
+        }
+        h1{
+            color:yellow;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+  <div class="max-w-4xl mx-auto py-10 px-4">
+    <h1 class="text-4xl font-bold mb-6 text-center">Automatic Rain Detector and Cloth Protection System</h1>
+
+    <p class="text-lg mb-4">
+      This project is designed to automatically detect rain using a rain sensor and protect clothes that are being dried outdoors. The core components include an Arduino Uno, a rain sensor module, and a servo motor. When the sensor detects rainfall, it sends a signal to the Arduino, which then activates the servo motor to pull a cover over the clothes, preventing them from getting wet.
+    </p>
+
+    <p class="text-lg mb-6">
+      The system offers an efficient, hands-free solution to protect laundry in unexpected rain conditions. It’s particularly useful in areas with sudden weather changes, helping to avoid re-washing or damage to clothes.
+    </p>
+
+    <h2 class="text-2xl font-semibold mb-4">Circuit Diagram</h2>
+    <img src="proj/diag.jpg" alt="Circuit Diagram" class="mb-8 rounded-lg shadow-md">
+
+    <h2 class="text-2xl font-semibold mb-4">Arduino Code</h2>
+    <pre class="bg-gray-800 text-green-400 p-4 rounded-md overflow-x-auto mb-8">
+#include &lt;Servo.h&gt;
+
+Servo tap_servo;
+int sensor_pin = 4;
+int tap_servo_pin = 5;
+int val;
+
+void setup() {
+  pinMode(sensor_pin, INPUT);
+  tap_servo.attach(tap_servo_pin);
+}
+
+void loop() {
+  val = digitalRead(sensor_pin);
+  if (val == 0) {
+    tap_servo.write(0);
+  }
+  if (val == 1) {
+    tap_servo.write(180);
+  }
+}
+    </pre>
+
+    <h2 class="text-2xl font-semibold mb-4">Real-life Setup</h2>
+    <img src="proj/real.jpg" alt="Real Setup Photo" class="mb-8 rounded-lg shadow-md">
+
+    <h2 class="text-2xl font-semibold mb-4">Working Demonstration</h2>
+    <video controls class="rounded-lg shadow-lg">
+      <source src="proj/vid.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortfolioJYO</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="realport.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">♩ Jyothis</a>
+        <nav>
+            <a href="#home" class="items active">Home</a>
+            <a href="#about"  class="items">About</a>
+            <a href="#projects" class="items">Projects</a>
+            <a href="#contact" class="items">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <picture >
+            <source srcset="proj/landimg.png" media="(max-width: 1100px)">
+            <img src="proj/potimg.png" alt="cool image">
+        </picture>
+        
+        <div class="home-word">
+            <h1>Hi, it's <span>Jyothis</span></h1>
+            <h2>I am a <span>Coder</span> </h2>
+            <p>Welcome, I'm Jyothis Sudhakaran, a Computer Science student who is passionate about building intuitive and efficient digital solutions. Eager about technology and driven by curiosity, I create, build, and explore the digital world. Explore my portfolio to see my projects in web development, automation, and problem-solving.</p>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/jyothis-sudhakaran-513011326/" target="_blank" ><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Jyothis02" target="_blank"><i class="fa-brands fa-github" ></i></a>
+            <a href="https://www.instagram.com/jyo_does_nothing/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>      
+            <br><a href="#projects" class="btn">See My Works</a>
+        </div>
+   </section>
+
+   <section id="about">
+
+        <h3>About Me</h3>
+        <br>
+        <div class="about-content">
+            <p>I’m a passionate and curious Computer Science student who loves building simple yet effective websites and projects. I enjoy learning new tech, solving problems, and turning ideas into working systems. Whether it's a flight booking site or a clean portfolio, I focus on functionality and user experience. I'm always up for experimenting, improving my skills, and working on cool stuff.</p>
+        </div>
+        <br><br>
+        <div class="gridy">
+            <div class="education">
+                <h2>Education</h2>
+                <p>Army Public School--Schooling</p>
+                <p>Class 10th--91%</p>
+                <p>Class 12th--88%</p><br>
+                <p>Amrita Vishwa Vidyapeetham--Btech(ongoing)</p>
+            </div>
+    
+            <div class="languages">
+                <h2>Languages</h2>
+                <p>English</p>
+                <p>Hindi</p>
+                <p>Malayalam</p>
+            </div>
+            
+            <div class="hobbies">
+                <h2>Hobbies</h2>
+                <p>Volleyball</p>
+                <p>Gaming</p>
+                <p>Video Editing</p>
+                <p>Painting</p>
+            </div>
+    
+            <div class="skills">
+                <h2>Skills</h2>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>JavaScript</p>
+                <p>Python</p>
+                <p>Java</p>
+                <p>MySQL</p>
+            </div>
+        </div>
+       </section>
+      
+   
+    <section id="projects">
+        <h3>My Projects & Works</h3>
+        <p>Here are some of my projects that I have worked on.</p>
+        <div class="gallery">
+            <div class="proj1">
+                <div class="p1w">
+                    <h4>Automatic Rain Detector and Cloth Retriever</h4>
+                    <p>Project includes a rain detector and a cloth retrieving mechanism which detects rain and automatically retracts cloths from outside to inside shade. Whole mechanism is ran by and Arduino.</p>
+                    <p>It is a mini project and is made using Arduino, servo motor, rain sensor and a relay.</p>
+                    <br>
+                    <a href="project1.html" target="_blank"><small><i>Details....</i></small></a>
+                </div>
+                <img src="proj/diag.jpg" alt="Project 1">
+            </div>
+            <br>
+            <div class="proj2">
+                <div class="p2w">
+                    <h4>Air Travel Management Website</h4>
+                    <p> A website where a person can see available flights and book them according to their needs.It also has a login page and all the data is encrypted.</p>
+                    <p>The website is currently up for upgrading with addition of API's to track and append real time flights and timings and this website is made using HTML, CSS, JavaScript and Java.</p>
+                    <br>
+                    <a href="project2.html" target="_blank"><small><i>Details....</i></small></a>
+                </div>
+               <img src="proj/airlog.png" alt="Project 2">
+            </div>
+            <br>
+            <div class="proj3">
+                <div class="p3w">
+                    <h4>Java Game Development</h4>
+                    <p>A 2D game where a person can roam around and explore the map. The game is in development. Java and a library of API's are being used to create this game.</p>
+                    <br>
+                    <h5>(in starting stage)</h5>
+                </div>
+               <img src="proj/game.jpg" alt="Project3">  
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact">   
+        <h3>Contact Me</h3>
+        <form class="contact-form">
+            <div class="form-group">
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Message" rows="5" required></textarea>
+            </div>
+            <button type="submit" onclick="alert('Message sent successfully!');">Send Message</button>
+        </form>
+        <br><br>
+        <p>Email Me: <a href="mailto:Jyothissudhakaran@gmail.com" target="_blank">Jyothissudhakaran@gmail.com</a></p>
+    </section>
+
+    
+<script>
+//Script part is for changing highlighted text in nav 
+    const navItems = document.querySelectorAll('.items');
+    navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navItems.forEach(el => el.classList.remove('active'));
+        item.classList.add('active'); 
+    });
+});
+</script>
+
+</body>
+</html>
